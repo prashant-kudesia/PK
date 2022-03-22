@@ -16,7 +16,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
+//import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
 public class StepDefinition_3_UnacademyTest {
 	
 	public static WebDriver driver;
@@ -64,8 +65,8 @@ public class StepDefinition_3_UnacademyTest {
 		//Thread.sleep(30000);
 		WebElement Title = driver.findElement(By.xpath(prop.getProperty("homepage_title")));
 		String ExpectedText = "Crack IITJEE, NEET Foundation & NTSE with India's largest learning platform";
-		Assert.assertEquals(ExpectedText, Title.getText());
-		System.out.println("No result found text is expected – Assert passed");			
+		assertEquals(ExpectedText, Title.getText());
+		System.out.println("No result found text is expected â€“ Assert passed");			
 	}
 
 	@When("user clicks on search icon")
@@ -292,8 +293,8 @@ public class StepDefinition_3_UnacademyTest {
 		Thread.sleep(5000);
 		WebElement NoData = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[1]/div/div[2]/div[2]/h3"));
 		String ExpectedText = "No result found";
-		Assert.assertEquals(ExpectedText, NoData.getText());
-		System.out.println("No result found text is expected – Assert passed");
+		assertEquals(ExpectedText, NoData.getText());
+		System.out.println("No result found text is expected â€“ Assert passed");
 	}
 	
 }
